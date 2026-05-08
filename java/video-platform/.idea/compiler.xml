@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="CompilerConfiguration">
+    <annotationProcessing>
+      <profile name="Maven default annotation processors profile" enabled="true">
+        <sourceOutputDir name="target/generated-sources/annotations" />
+        <sourceTestOutputDir name="target/generated-test-sources/test-annotations" />
+        <outputRelativeToContentRoot value="true" />
+        <module name="video-transcode" />
+        <module name="video-file" />
+        <module name="video-common" />
+        <module name="video-notification" />
+        <module name="video-user" />
+        <module name="video-gateway" />
+        <module name="video-video" />
+      </profile>
+    </annotationProcessing>
+    <bytecodeTargetLevel>
+      <module name="video-common" target="8" />
+      <module name="video-file" target="8" />
+      <module name="video-gateway" target="8" />
+      <module name="video-notification" target="8" />
+      <module name="video-platform-parent" target="8" />
+      <module name="video-transcode" target="8" />
+      <module name="video-user" target="8" />
+      <module name="video-video" target="8" />
+    </bytecodeTargetLevel>
+  </component>
+</project>

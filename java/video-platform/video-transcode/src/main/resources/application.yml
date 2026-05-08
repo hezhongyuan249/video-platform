@@ -1,0 +1,35 @@
+server:
+  port: 8083
+spring:
+  application:
+    name: video-transcode
+  cloud:
+    nacos:
+      discovery:
+        enabled: true
+        server-addr: 127.0.0.1:8848
+      config:
+        server-addr: 127.0.0.1:8848
+  datasource:
+    driver-class-name: com.mysql.jdbc.Driver
+    url: jdbc:mysql://localhost:3306/video_platform?useUnicode=true&characterEncoding=utf8&serverTimezone=Asia/Shanghai&useSSL=false&allowPublicKeyRetrieval=true
+    username: root
+    password: 123456
+  redis:
+    host: localhost
+    port: 6379
+
+mybatis-plus:
+  configuration:
+    map-underscore-to-camel-case: true
+  global-config:
+    db-config:
+      id-type: auto
+
+ffmpeg:
+  path: C:/ffmpeg-8.1-full_build/bin/ffmpeg.exe
+
+video:
+  path: C:/test/videos/
+  url:
+    prefix: http://localhost:8088/videos/

@@ -1,0 +1,373 @@
+/* 全局简洁样式 */
+/* 覆盖 Element Plus 默认样式 */
+
+:root {
+  /* 按钮样式 */
+  --el-button-bg-color: var(--primary-900);
+  --el-button-border-color: var(--primary-900);
+  --el-button-text-color: #fff;
+  --el-button-hover-bg-color: var(--primary-700);
+  --el-button-hover-border-color: var(--primary-700);
+  
+  /* 输入框样式 */
+  --el-input-bg-color: var(--bg-primary);
+  --el-input-border-color: var(--border);
+  --el-input-text-color: var(--text-primary);
+  --el-input-placeholder-color: var(--text-tertiary);
+  --el-input-hover-border-color: var(--border-hover);
+  --el-input-focus-border-color: var(--primary-900);
+  
+  /* 表格样式 */
+  --el-table-bg-color: var(--bg-primary);
+  --el-table-tr-bg-color: var(--bg-primary);
+  --el-table-header-bg-color: var(--bg-secondary);
+  --el-table-row-hover-bg-color: var(--bg-hover);
+  --el-table-border-color: var(--border);
+  --el-table-text-color: var(--text-primary);
+  --el-table-header-text-color: var(--text-secondary);
+  
+  /* 卡片样式 */
+  --el-card-bg-color: var(--bg-primary);
+  --el-card-border-color: var(--border);
+  
+  /* 分页样式 */
+  --el-pagination-bg-color: var(--bg-primary);
+  --el-pagination-text-color: var(--text-secondary);
+  --el-pagination-button-bg-color: var(--bg-primary);
+  --el-pagination-hover-color: var(--primary-900);
+  
+  /* 消息提示 */
+  --el-message-bg-color: var(--bg-primary);
+  --el-message-border-color: var(--border);
+  
+  /* 弹窗 */
+  --el-messagebox-bg-color: var(--bg-primary);
+  --el-messagebox-title-color: var(--text-primary);
+  --el-messagebox-content-color: var(--text-secondary);
+}
+
+/* 深色模式 */
+.dark {
+  --el-button-bg-color: var(--dark-text-primary);
+  --el-button-border-color: var(--dark-text-primary);
+  --el-button-text-color: var(--dark-bg-primary);
+  
+  --el-input-bg-color: var(--dark-bg-primary);
+  --el-input-border-color: var(--dark-border);
+  --el-input-text-color: var(--dark-text-primary);
+  --el-input-placeholder-color: var(--dark-text-tertiary);
+  
+  --el-table-bg-color: var(--dark-bg-primary);
+  --el-table-tr-bg-color: var(--dark-bg-primary);
+  --el-table-header-bg-color: var(--dark-bg-secondary);
+  --el-table-row-hover-bg-color: var(--dark-bg-hover);
+  --el-table-border-color: var(--dark-border);
+  --el-table-text-color: var(--dark-text-primary);
+  --el-table-header-text-color: var(--dark-text-secondary);
+  
+  --el-card-bg-color: var(--dark-bg-primary);
+  --el-card-border-color: var(--dark-border);
+  
+  --el-pagination-bg-color: var(--dark-bg-primary);
+  --el-pagination-text-color: var(--dark-text-secondary);
+  --el-pagination-button-bg-color: var(--dark-bg-primary);
+  
+  /* 弹窗 */
+  --el-messagebox-bg-color: var(--dark-bg-primary);
+  --el-messagebox-title-color: var(--dark-text-primary);
+  --el-messagebox-content-color: var(--dark-text-secondary);
+}
+
+/* 通用卡片样式 */
+.simple-card {
+  background: var(--bg-primary);
+  border: 1px solid var(--border);
+  border-radius: 8px;
+  padding: 20px;
+}
+
+.dark .simple-card {
+  background: var(--dark-bg-primary);
+  border-color: var(--dark-border);
+}
+
+/* 通用按钮 */
+.btn {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  padding: 10px 20px;
+  font-size: 14px;
+  font-weight: 500;
+  border-radius: 4px;
+  cursor: pointer;
+  transition: all 0.15s ease;
+  border: 1px solid transparent;
+}
+
+.btn-primary {
+  background: var(--primary-900);
+  color: #fff;
+  border-color: var(--primary-900);
+}
+
+.btn-primary:hover {
+  opacity: 0.9;
+}
+
+.btn-secondary {
+  background: transparent;
+  color: var(--text-primary);
+  border-color: var(--border);
+}
+
+.btn-secondary:hover {
+  background: var(--bg-hover);
+}
+
+.btn-danger {
+  background: var(--error-500);
+  color: #fff;
+  border-color: var(--error-500);
+}
+
+.btn-danger:hover {
+  background: var(--error-600);
+}
+
+.btn-success {
+  background: var(--success-500);
+  color: #fff;
+  border-color: var(--success-500);
+}
+
+.btn-success:hover {
+  background: var(--success-600);
+}
+
+.btn-sm {
+  padding: 6px 12px;
+  font-size: 13px;
+}
+
+.btn:disabled {
+  opacity: 0.5;
+  cursor: not-allowed;
+}
+
+/* 通用表单 */
+.form-group {
+  margin-bottom: 16px;
+}
+
+.form-label {
+  display: block;
+  margin-bottom: 8px;
+  font-size: 14px;
+  font-weight: 500;
+  color: var(--text-primary);
+}
+
+.form-input {
+  width: 100%;
+  padding: 10px 12px;
+  font-size: 14px;
+  border: 1px solid var(--border);
+  border-radius: 4px;
+  background: var(--bg-primary);
+  color: var(--text-primary);
+}
+
+.form-input:focus {
+  outline: none;
+  border-color: var(--primary-900);
+}
+
+.form-input::placeholder {
+  color: var(--text-tertiary);
+}
+
+/* 通用表格 */
+.simple-table {
+  width: 100%;
+  border-collapse: collapse;
+}
+
+.simple-table th,
+.simple-table td {
+  padding: 12px 16px;
+  text-align: left;
+  border-bottom: 1px solid var(--border);
+}
+
+.simple-table th {
+  background: var(--bg-secondary);
+  font-weight: 500;
+  font-size: 14px;
+  color: var(--text-secondary);
+}
+
+.simple-table td {
+  font-size: 14px;
+  color: var(--text-primary);
+}
+
+.simple-table tr:hover td {
+  background: var(--bg-hover);
+}
+
+.dark .simple-table th {
+  background: var(--dark-bg-secondary);
+}
+
+.dark .simple-table tr:hover td {
+  background: var(--dark-bg-hover);
+}
+
+/* 通用标题 */
+.page-title {
+  font-size: 20px;
+  font-weight: 600;
+  color: var(--text-primary);
+  margin-bottom: 20px;
+}
+
+/* 通用工具栏 */
+.toolbar {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  margin-bottom: 20px;
+  flex-wrap: wrap;
+}
+
+.toolbar .search-input {
+  width: 240px;
+  padding: 8px 12px;
+  font-size: 14px;
+  border: 1px solid var(--border);
+  border-radius: 4px;
+  background: var(--bg-primary);
+  color: var(--text-primary);
+}
+
+.toolbar .search-input:focus {
+  outline: none;
+  border-color: var(--primary-900);
+}
+
+/* 通用分页 */
+.pagination {
+  display: flex;
+  justify-content: flex-end;
+  align-items: center;
+  gap: 8px;
+  margin-top: 20px;
+  padding-top: 20px;
+  border-top: 1px solid var(--border);
+}
+
+.pagination-info {
+  font-size: 14px;
+  color: var(--text-secondary);
+  margin-right: auto;
+}
+
+/* 空状态 */
+.empty-state {
+  padding: 60px 20px;
+  text-align: center;
+}
+
+.empty-state p {
+  color: var(--text-tertiary);
+  margin-bottom: 16px;
+}
+
+/* 通用页面容器 */
+.page-container {
+  padding: 24px;
+  background: var(--bg-primary);
+  min-height: 100vh;
+}
+
+.dark .page-container {
+  background: var(--dark-bg-primary);
+}
+
+/* 通用页面标题 */
+.page-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 24px;
+  padding-bottom: 16px;
+  border-bottom: 1px solid var(--border);
+}
+
+.page-header h2,
+.page-header h3 {
+  font-size: 20px;
+  font-weight: 600;
+  color: var(--text-primary);
+  margin: 0;
+}
+
+.dark .page-header {
+  border-bottom-color: var(--dark-border);
+}
+
+.dark .page-header h2,
+.dark .page-header h3 {
+  color: var(--dark-text-primary);
+}
+
+/* Element Plus MessageBox 弹窗样式覆盖 */
+.el-message-box {
+  background-color: var(--el-messagebox-bg-color) !important;
+  border-color: var(--border) !important;
+}
+
+.el-message-box__title {
+  color: var(--el-messagebox-title-color) !important;
+}
+
+.el-message-box__content {
+  color: var(--el-messagebox-content-color) !important;
+}
+
+.el-message-box__btns .el-button--primary {
+  background-color: var(--text-primary) !important;
+  border-color: var(--text-primary) !important;
+}
+
+.el-message-box__btns .el-button {
+  background-color: transparent !important;
+  border-color: var(--border) !important;
+  color: var(--text-primary) !important;
+}
+
+.dark .el-message-box {
+  background-color: var(--dark-bg-primary) !important;
+  border-color: var(--dark-border) !important;
+}
+
+.dark .el-message-box__title {
+  color: var(--dark-text-primary) !important;
+}
+
+.dark .el-message-box__content {
+  color: var(--dark-text-secondary) !important;
+}
+
+.dark .el-message-box__btns .el-button--primary {
+  background-color: var(--dark-text-primary) !important;
+  border-color: var(--dark-text-primary) !important;
+  color: var(--dark-bg-primary) !important;
+}
+
+.dark .el-message-box__btns .el-button {
+  background-color: transparent !important;
+  border-color: var(--dark-border) !important;
+  color: var(--dark-text-primary) !important;
+}

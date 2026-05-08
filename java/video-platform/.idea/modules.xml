@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="ProjectModuleManager">
+    <modules>
+      <module fileurl="file://$PROJECT_DIR$/video-common/video-common.iml" filepath="$PROJECT_DIR$/video-common/video-common.iml" />
+      <module fileurl="file://$PROJECT_DIR$/video-file/video-file.iml" filepath="$PROJECT_DIR$/video-file/video-file.iml" />
+      <module fileurl="file://$PROJECT_DIR$/video-gateway/video-gateway.iml" filepath="$PROJECT_DIR$/video-gateway/video-gateway.iml" />
+      <module fileurl="file://$PROJECT_DIR$/video-notification/video-notification.iml" filepath="$PROJECT_DIR$/video-notification/video-notification.iml" />
+      <module fileurl="file://$PROJECT_DIR$/video-platform-parent.iml" filepath="$PROJECT_DIR$/video-platform-parent.iml" />
+      <module fileurl="file://$PROJECT_DIR$/video-transcode/video-transcode.iml" filepath="$PROJECT_DIR$/video-transcode/video-transcode.iml" />
+      <module fileurl="file://$PROJECT_DIR$/video-user/video-user.iml" filepath="$PROJECT_DIR$/video-user/video-user.iml" />
+      <module fileurl="file://$PROJECT_DIR$/video-video/video-video.iml" filepath="$PROJECT_DIR$/video-video/video-video.iml" />
+    </modules>
+  </component>
+</project>

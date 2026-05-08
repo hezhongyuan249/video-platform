@@ -1,0 +1,5 @@
+com\video\platform\notification\controller\NotificationController.class
+com\video\platform\notification\feign\VideoFeign.class
+com\video\platform\notification\entity\Notification.class
+com\video\platform\notification\NotificationApplication.class
+com\video\platform\notification\mapper\NotificationMapper.class

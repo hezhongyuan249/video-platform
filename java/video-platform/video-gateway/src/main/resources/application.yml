@@ -1,0 +1,87 @@
+server:
+  port: 8088
+
+spring:
+  application:
+    name: video-gateway
+  cloud:
+    nacos:
+      discovery:
+        enabled: true
+        server-addr: localhost:8848
+      config:
+        enabled: false
+    gateway:
+      discovery:
+        locator:
+          enabled: true
+          lower-case-service-id: true
+      routes:
+        # 评论接口
+        - id: video-comment-api
+          uri: lb://video-video
+          predicates:
+            - Path=/api/comment/**
+
+        # 通知接口
+        - id: video-notification-api
+          uri: lb://video-notification
+          predicates:
+            - Path=/api/notification/**
+
+        # 用户服务
+        - id: video-user
+          uri: lb://video-user
+          predicates:
+            - Path=/api/user/**,/user/**
+          filters:
+            - StripPrefix=1
+
+        # 分类接口
+        - id: video-category-api
+          uri: lb://video-video
+          predicates:
+            - Path=/api/category/**
+          filters:
+            - StripPrefix=1
+
+        # 视频接口
+        - id: video-video-api
+          uri: lb://video-video
+          predicates:
+            - Path=/api/video/**
+          filters:
+            - StripPrefix=1
+
+        # 视频静态资源
+        - id: video-covers
+          uri: lb://video-video
+          predicates:
+            - Path=/covers/**
+        - id: video-videos
+          uri: lb://video-video
+          predicates:
+            - Path=/videos/**
+        
+        # 转码接口
+        - id: video-transcode-api
+          uri: lb://video-transcode
+          predicates:
+            - Path=/api/transcode/**
+          filters:
+            - StripPrefix=1
+
+      # 跨域
+      globalcors:
+        add-to-simple-url-handler-mapping: true
+        cors-configurations:
+          '[/**]':
+            allowedOrigins: "http://localhost:8081"
+            allowedMethods: ["GET","POST","PUT","DELETE","OPTIONS","HEAD"]
+            allowedHeaders: "*"
+            allowCredentials: true
+            maxAge: 3600
+
+eureka:
+  client:
+    enabled: false

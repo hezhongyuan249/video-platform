@@ -1,0 +1,14 @@
+com\video\platform\user\controller\UserController.class
+com\video\platform\user\config\RedisConfig.class
+com\video\platform\user\mapper\UserMapper.class
+com\video\platform\user\service\TokenService.class
+com\video\platform\user\mapper\AdminCodeMapper.class
+com\video\platform\user\service\impl\UserServiceImpl.class
+com\video\platform\user\entity\AdminCode.class
+com\video\platform\user\VideoUserApplication.class
+com\video\platform\user\service\UserService.class
+com\video\platform\user\config\SchedulingConfig.class
+com\video\platform\user\task\AccountCleanupTask.class
+com\video\platform\user\config\CorsConfig.class
+com\video\platform\user\entity\User.class
+com\video\platform\user\task\AutoDeleteTask.class

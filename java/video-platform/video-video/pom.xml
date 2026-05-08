@@ -1,0 +1,76 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project xmlns="http://maven.apache.org/POM/4.0.0"
+         xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+         xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
+    <parent>
+        <artifactId>video-platform-parent</artifactId>
+        <groupId>com.video</groupId>
+        <version>1.0.0</version>
+        <relativePath>..</relativePath>
+    </parent>
+    <modelVersion>4.0.0</modelVersion>
+
+    <artifactId>video-video</artifactId>
+    <name>video-video</name>
+
+    <dependencies>
+        <!-- Nacos 服务注册发现 -->
+        <dependency>
+            <groupId>com.alibaba.cloud</groupId>
+            <artifactId>spring-cloud-starter-alibaba-nacos-discovery</artifactId>
+        </dependency>
+
+        <!-- 公共模块（已包含所有需要的依赖：Web/MySQL/MyBatis-Plus/Lombok等） -->
+        <dependency>
+            <groupId>com.video</groupId>
+            <artifactId>video-common</artifactId>
+            <version>1.0.0</version>
+        </dependency>
+        
+        <!-- 用户模块（获取用户信息） -->
+        <dependency>
+            <groupId>com.video</groupId>
+            <artifactId>video-user</artifactId>
+            <version>1.0.0</version>
+        </dependency>
+
+        <!-- 通知模块 -->
+        <dependency>
+            <groupId>com.video</groupId>
+            <artifactId>video-notification</artifactId>
+            <version>1.0.0</version>
+        </dependency>
+        
+        <!-- Feign远程调用 -->
+        <dependency>
+            <groupId>org.springframework.cloud</groupId>
+            <artifactId>spring-cloud-starter-openfeign</artifactId>
+        </dependency>
+        
+        <!-- LoadBalancer -->
+        <dependency>
+            <groupId>org.springframework.cloud</groupId>
+            <artifactId>spring-cloud-starter-loadbalancer</artifactId>
+        </dependency>
+    </dependencies>
+
+    <build>
+        <plugins>
+            <plugin>
+                <groupId>org.springframework.boot</groupId>
+                <artifactId>spring-boot-maven-plugin</artifactId>
+                <version>2.7.15</version>
+                <executions>
+                    <execution>
+                        <goals>
+                            <goal>repackage</goal>
+                        </goals>
+                    </execution>
+                </executions>
+                <configuration>
+                    <mainClass>com.video.platform.video.VideoApplication</mainClass>
+                </configuration>
+            </plugin>
+        </plugins>
+    </build>
+</project>

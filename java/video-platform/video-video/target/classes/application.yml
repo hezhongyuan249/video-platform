@@ -1,0 +1,34 @@
+# 所有配置合并成一个，无重复key
+spring:
+  # 微服务核心配置（Nacos+服务名）
+  application:
+    name: video-video
+  cloud:
+    nacos:
+      discovery:
+        enabled: true
+        server-addr: 127.0.0.1:8848
+  # 数据库配置
+  datasource:
+    url: jdbc:mysql://localhost:3306/video_platform?useUnicode=true&characterEncoding=utf8&serverTimezone=Asia/Shanghai&useSSL=false
+    username: root
+    password: 123456
+    driver-class-name: com.mysql.jdbc.Driver
+  # Redis配置
+  redis:
+    host: localhost
+    port: 6379
+  # 文件上传配置
+  servlet:
+    multipart:
+      max-file-size: 1024MB
+      max-request-size: 1024MB
+
+# 服务端口
+server:
+  port: 8084
+
+# MyBatis-Plus配置
+mybatis-plus:
+  configuration:
+    map-underscore-to-camel-case: true

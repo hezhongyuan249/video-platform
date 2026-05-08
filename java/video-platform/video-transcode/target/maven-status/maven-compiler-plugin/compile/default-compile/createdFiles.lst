@@ -1,0 +1,8 @@
+com\video\platform\transcode\mapper\VideoMapper.class
+com\video\platform\transcode\feign\TranscodeFeign.class
+com\video\platform\transcode\entity\Video.class
+com\video\platform\transcode\util\TranscodeProgress.class
+com\video\platform\transcode\VideoTranscodeApplication.class
+com\video\platform\transcode\controller\TranscodeController.class
+com\video\platform\transcode\util\FFmpegUtil.class
+com\video\platform\transcode\service\TranscodeService.class
